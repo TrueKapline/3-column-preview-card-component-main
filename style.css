@@ -8,13 +8,12 @@ body {
     margin: 0;
     background-color: var(--very-light-gray);
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     font-family: 'Lexend Deca', sans-serif;
 }
 
-h1, p, img {
+* {
     margin: 0;
 }
 
@@ -23,6 +22,7 @@ h1, p, img {
     overflow: hidden;
     display: flex;
     flex-direction: row;
+    margin-top: 171px;
 }
 
 h1 {
@@ -83,7 +83,9 @@ button {
 }
 
 .attribution {
-    font-size: 11px;
+    position: absolute;
+    bottom: 30px;
+    font-size: 15px;
     text-align: center;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -113,16 +115,23 @@ button {
 
 @media screen and (max-width: 1000px) {
     body {
+        position: relative;
         height: auto;
         margin-top: 88px;
     }
 
     .card {
+        margin-top: 0;
+        margin-bottom: 88px;
         flex-direction: column;
     }
 
     button {
         margin-top: 25px;
+    }
+
+    .attribution {
+        font-size: 12px;
     }
 }
 
